@@ -32,7 +32,7 @@ orange: #f89949;
 01 Sensible defaults ----------------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------------------------------- */
 
-@import "css/reset.css";
+@import "reset.css";
 
 div,
 article,
@@ -246,7 +246,7 @@ u {
 }
 #all.brand {
 	z-index: 11;
-	background: url(css/images/writerof.png) repeat-x;
+	background: url(images/writerof.png) repeat-x;
 	-webkit-animation: scale-all 8s infinite normal linear;
 	-moz-animation: scale-all 8s infinite normal linear;
 	-o-animation: scale-all 8s infinite normal linear;
@@ -254,7 +254,7 @@ u {
 #code.brand {
 	z-index: 8;
 	margin-top: -235px; 
-	background: url(css/images/writerofcode.png) repeat-x;
+	background: url(images/writerofcode.png) repeat-x;
 	-webkit-animation: scale-all 4s infinite normal linear;
 	-moz-animation: scale-all 4s infinite normal linear;
 	-o-animation: scale-all 4s infinite normal linear;
@@ -262,7 +262,7 @@ u {
 #ap.brand {
 	z-index: 9;
 	margin-top: -325px;
-	background: url(css/images/writerofap.png) repeat-x;
+	background: url(images/writerofap.png) repeat-x;
 	-webkit-animation: scale-all 2s infinite normal linear;
 	-moz-animation: scale-all 2s infinite normal linear;
 	-o-animation: scale-all 2s infinite normal linear;
