@@ -1,0 +1,280 @@
+<html>
+	<head>
+		<title>Social Media Example</title>
+		<script type='text/javascript' src='http://patrickkeaveny.com/wp-includes/js/jquery/jquery.js?ver=1.10.2'></script>
+		<script type='text/javascript' src='http://patrickkeaveny.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1'></script>
+		<script type='text/javascript' src='http://patrickkeaveny.com/wp-content/themes/GDEstarkers/js/site.js?ver=3.8.1'></script>
+		<script src='http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js'></script>
+		<script src='bootstrap/js/bootstrap.min.js'></script>
+		<script type='text/javascript' src='http://www.google.com/jsapi'></script>
+		<!--<script src="bootstrap/js/bootstrap-modal.js"></script>-->
+		<!--<script src="bootstrap/js/bootstrap-modalmanager.js"></script> -->
+		<link href='bootstrap/css/bootstrap.css' rel='stylesheet' />
+		<link href='bootstrap/css/bootstrap-theme.min.css' rel='stylesheet' />
+		
+	</head>
+	<body class='container'>
+		<!--facebook SDK mumbojumbo-->
+		<div id="fb-root"></div>
+		<script>
+		  window.fbAsyncInit = function() {
+			FB.init({
+			  appId      : '1374631859472855',
+			  status     : true,
+			  xfbml      : true
+			});
+		  };
+
+		  (function(d, s, id){
+			 var js, fjs = d.getElementsByTagName(s)[0];
+			 if (d.getElementById(id)) {return;}
+			 js = d.createElement(s); js.id = id;
+			 js.src = "//connect.facebook.net/en_US/all.js";
+			 fjs.parentNode.insertBefore(js, fjs);
+		   }(document, 'script', 'facebook-jssdk'));
+
+		</script>
+		<div class='page-header jumbotron' align="center">
+			<h2>
+				This is a web page that shows how we can integrate social media!
+			</h2>
+			<br />
+			<h4 align="center" class=""> NOTE: It is also possible to have all of these options in different languages
+				<br />
+				<small>Doing so however will require some labor-intensive codework.</small>
+			</h4>
+		</div><!--/page-header-->
+		<hr>
+		<div class="row">
+			<span class="input-group-addon">
+				<button id="menu-donate-button" align="center" class="btn btn-primary btn-lg" data-toggle="modal">
+					Social Media and Donations
+				</button>
+			</span>
+		</div>
+		<div class="row">
+			<div class='col-lg-12'>
+				<div id="donate-option" class="hide ">
+					<h3 align="center"> Example: Donating to our eTapestry system</h3>
+					<!--<form id='donate' action='' method='post' onsubmit='submitAction()' class='form'>-->
+						<div class='input input-group-lg'>
+							<!--must turn into radio button-->
+							<span class="input-group-addon">
+								<input type="radio" name="donate-group" value="5" /> $5
+							</span>
+							<span class="input-group-addon">
+								<input type="radio" name="donate-group" value="10" /> $10
+							</span>
+							<span class="input-group-addon">
+								<input type="radio" name="donate-group" value="20" /> $20
+							</span>
+							<span class="input-group-addon">
+								<input type="radio" name="donate-group" value="30" /> $30
+							</span>
+							<span class="input-group-addon">
+								<input type="radio" name="donate-group" value="40" /> $40
+							</span>
+							<span class="input-group-addon">
+								<input type="radio" name="donate-group" value="50" /> $50
+							</span>
+							<span class="input-group-addon">
+								<input type="radio" name="donate-group" value="100" /> $100
+							</span>
+							<span class="input-group-addon">
+								<input type="radio" name="donate-group" value="500" /> $500
+							</span>
+							<!--<input id="donate-now" type='text' class='form-control' placeholder='How much would you like to donate?' />-->
+							<br />
+							<div style="text-align: center">
+								<button id="donate-button" class="btn btn-success btn-lg" data-toggle="modal" data-target="#modal-example" style="text-align: center;">
+									Donate!
+								</button>
+							</div>
+							<br />
+							<!--<input type='submit' id='submit-form' class='btn btn-primary' value='Donate'  />-->
+						</div><!--/input-group-->
+					<!--</form>-->
+				</div><!--/#etapestry-->
+			</div><!--/col-lg-12-->
+		</div><!--/.row-->
+		<div class="row">
+			<span class="input-group-addon">
+				<button id="menu-twitter-button" align="center" class="btn btn-primary btn-lg" data-toggle="modal">
+					Twitter Buttons
+				</button>
+			</span>
+		</div><!--/.row-->
+		<div class="row">	
+			<div class="col-lg-12">
+				<div id="twitter-buttons-option" class="hide ">
+					<h3 align="center"> Available Twitter Buttons (short list):</h3>
+					<div id="twitter-buttons">
+						<span class="input-group-addon">
+							<a href="https://twitter.com/intent/tweet?screen_name=JesuitRefugee" class="twitter-mention-button" data-size="large" data-lang="en">Tweet at @JesuitRefugeeService!</a>
+	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+						</span>
+						<span class="input-group-addon">
+							<a href="https://twitter.com/intent/tweet?button_hashtag=#Accompany&text=JRS%20works%20to" class="twitter-hashtag-button" data-size="large" data-lang="en" data-related="JesuitRefugee">Tweet #Accompany</a>
+	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+						</span>
+						<span class="input-group-addon">
+							<a href="https://twitter.com/intent/tweet?button_hashtag=#Serve&text=JRS%20works%20to" class="twitter-hashtag-button" data-size="large" data-lang="en" data-related="JesuitRefugee">Tweet #Serve</a>
+	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+						</span>
+						<span class="input-group-addon">
+							<a href="https://twitter.com/intent/tweet?button_hashtag=#Advocate&text=JRS%20works%20to" class="twitter-hashtag-button" data-size="large" data-lang="en" data-related="JesuitRefugee">Tweet #Advocate</a>
+	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+						</span>
+					</div><!--#twitter-buttons-->
+				</div><!--#twitter-buttons-option-->
+			</div><!--col-lg-12-->	 
+		</div><!--/row-->
+		<div class="row">
+			<span class="input-group-addon">
+				<button id="menu-facebook-button" align="center" class="btn btn-primary btn-lg" data-toggle="modal">
+					Facebook Buttons
+				</button>
+			</span>
+		</div><!--/.row-->
+		<div class='row'>
+			<div class="col-lg-12">
+				<div id="facebook-buttons-option" class="hide ">
+					<h3 align="center"> Available Facebook Buttons (short list):</h3>
+					<div id="fb-buttons">
+						<span class="input-group-addon">
+							<div class="fb-like" data-href="https://www.facebook.com/JesuitRefugeeService" data-layout="box_count" data-action="like" data-show-faces="true" data-share="true"></div>
+						</span>
+						<span class="input-group-addon">
+							<div class="fb-send" data-href="http://en.jrs.net/donate" data-colorscheme="light"></div>
+						</span>
+						<span class="input-group-addon">
+							<div class="fb-like-box" data-href="http://www.facebook.com/JesuitRefugeeService" data-colorscheme="light" data-show-faces="true" data-header="true" data-stream="false" data-show-border="true"></div>
+						</span>
+						<span class="input-group-addon">
+							<div class="fb-activity" data-site="en.jrs.net" data-action="likes, recommends" data-colorscheme="light" data-header="true"></div>
+						</span>
+					</div><!--#fb-buttons-->
+				</div><!--$facebook-buttons-option-->
+			</div><!--col-lg-12-->	 
+		</div><!--/row-->
+		<div class="modal fade" id="modal-example" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">  
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+						<h4 class="modal-title">Thank you for donating!</h4>
+					</div><!--/modal-header--> 
+					<div class="modal-body">
+						<h4> Would you like to...</h4>
+						<div id="twitter-box"></div><!--#twitter-box-->
+					</div><!--modal-body-->
+					<div class="modal-footer">  
+						<!--<a href="#" class="btn btn-success">Call to action</a> -->
+						<h4><small>(Other things like Facebook, Tumblr, and LinkedIn are possible, with some work) </small></h4>        
+						<a href="#" class="btn btn-danger" data-dismiss="modal">Close</a>  
+					</div><!--/modal-footer--> 
+				</div><!--/modal-content-->
+			</div><!--/modal-dialog--> 
+		</div><!--/#modal-example--> 
+	</body><!--/container-->
+	<style>
+		.hide {
+			display: none;
+		}
+	</style>
+	<script type='text/javascript'>
+	$(document).ready(function() {
+		$("#donate-button").click(function() {
+			var text = $("input:radio[name='donate-group']:checked").val();
+			var s1 = new SocialMedia(text);
+			s1.tweetButton();
+			$("#facebook-link").click(function() {				
+				s1.facebookButton();
+			});
+		});
+		
+		$("#menu-donate-button").click(function() {
+			$("#donate-option").toggleClass("hide");
+		});
+		$("#menu-twitter-button").click(function() {
+			$("#twitter-buttons-option").toggleClass("hide");
+		});
+		$("#menu-facebook-button").click(function() {
+			$("#facebook-buttons-option").toggleClass("hide");
+		});
+	});
+	//	$('#submit-form').click(function() {
+	//		submitAction();
+	//	});
+	/**Complex object for social media buttons 
+	@param text = the text;
+**/	
+function SocialMedia(text) {
+	this.text = text;
+	
+	// global variables to avoid code duplication
+	this.facebook = "#facebook";
+	this.twitter = "#twitter";
+	this.tumblr = "#tumblr";
+	this.box = '-box';
+
+/**helper method for creating the Tweet button**/
+
+	this.tweetButton = function() {
+		location_div = this.twitter + this.box;
+		$.ajax({
+				url: "resources/tweet_button.php",
+				type: "POST",
+				data: {text: this.text},
+				success:function(result){
+					$(location_div).html(result);
+					},
+				error:function(response){alert("Error creating Tweet Button" + response);}
+			}).done(function() {
+		});
+	};
+
+/**helper method for creating the FB button**/
+
+	this.facebookButton = function(text, location) {
+		location_div = this.facebook + this.box;
+		$.ajax({
+				url: "resources/fb_button.php",
+				type: "POST",
+				data: {text: this.text},
+				success:function(result){
+					//alert(result);
+					$(location_div).replaceWith(result);
+					},
+				error:function(response){alert("Error creating FB Button" + response);}
+			}).done(function() {
+		});
+	};
+
+/**helper method for creating the tumblr button
+	@blogname = the name of the user's blog
+**/
+	this.tumblrButton = function(blogname) {
+		location_div = this.tumblr + this.box;
+		$.ajax({
+				url: "resources/tumblr_button.php",
+				type: "POST",
+				data: {text: this.text, blogname: blogname},
+				success:function(result){
+					$(location_div).html(result);
+					},
+				error:function(response){alert("Error creating Tumblr Button" + response);}
+			}).done(function() {
+		});
+	};
+} // end SocialMedia Object
+	
+	function submitAction(form) {
+		//var w = window.open('about:blank','Popup_Window','toolbar=0,scrollbars=1,location=0,statusbar=0,menubar=0,resizable=0,width=800,height=600,left = 312,top = 234');
+		//var content = "<html><head>	<title>Social Media Example</title> <script type='text/javascript' src='http://patrickkeaveny.com/wp-includes/js/jquery/jquery.js?ver=1.10.2'><link href='css/css/bootstrap.css' rel='stylesheet' /> <link href='css/css/bootstrap-theme.min.css' rel='stylesheet' /> </head> <body class='container'> <div class='page-header'> <h1> This is a web page that shows how we can integrate social media! </h1> </div><!--/page-header--> <div class='row'> <div class='col-lg-12'> <h1> Let's say someone wanted to donate $10 to our eTapestry system</h1> <form id='donate' action='' method='post' onsubmit='submitAction()' class='form'> <div class='input input-group-lg'> <input type='text' class='form-control' placeholder='How much would you like to donate?' /><input type='submit' id='submit-form' class='btn btn-primary' value='Donate'  /> </div><!--/input-group--> </form></div><!--/col-lg-12--> </div><!--/row--> </body><!--/container-->";
+		//form.target = 'Popup_Window';
+		//w.document.write(content);
+	}
+	</script>
+</html>
+				

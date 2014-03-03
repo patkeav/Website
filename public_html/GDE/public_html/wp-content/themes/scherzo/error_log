@@ -1,0 +1,3 @@
+[12-Aug-2012 21:54:22] PHP Fatal error:  Call to undefined function get_header() in /home/patrickk/public_html/wp-content/themes/scherzo/index.php on line 1
+[17-Aug-2012 11:15:01] PHP Fatal error:  Call to undefined function get_header() in /home/patrickk/public_html/wp-content/themes/scherzo/customblog.php on line 1
+[17-Aug-2012 11:17:25] PHP Fatal error:  Call to undefined function get_header() in /home/patrickk/public_html/wp-content/themes/scherzo/customblog.php on line 1
