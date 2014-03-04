@@ -23,6 +23,12 @@ body {
 a {
 	text-decoration: none;
 	color: #184068; }
+
+#searchsubmit {
+	width: auto;
+	padding 0px 20px;
+	font-size: 16px;   
+}
  
 	a:visited { color: #184068; }
  
@@ -62,7 +68,10 @@ input, textarea {
 	margin: 5px auto 5px auto;
 	border: 1px solid #999999;
 	background-position: top left; }
- 
+#s {
+ 	width:auto;
+ 	font-size: 18px;
+ }
 textarea { font-family: Helvetica, Geneva, sans-serif; }
  
 input:hover, textarea:hover { background: #f1f0ed; }
@@ -256,6 +265,9 @@ nav {
 .developer #code.brand {
 	margin-top: 75px;
 }
+.brand-home {
+	margin-top: 200px;
+}
 #brandName {
 	float: right;
 	margin: 0px 10% 0px 0px;
@@ -280,7 +292,7 @@ aside#sidebar {
 	width: inherit;
 }
 .page #content {
-	width: 85%;
+	width: 50%;
 	margin: 0 auto;
 }
 .thanks .brand {
@@ -676,9 +688,8 @@ img:hover { opacity: 1 ; }
  #single .sidebar-info {
  	width: 600px;
  }
- #single #searchform {
- 	 }
- 		
+ 
+		
 #sidebar .sidebar-info {
 	width: 60%;
 	position: absolute;
@@ -877,17 +888,22 @@ ul#outer-list li.inner-list-item {
 	.deetsContent button { display: none; }
 	
 	#header-contact-info {
-		position:fixed;
+		position: fixed;
 		right: 0;
-		top: 0;
+		top: 60%;
 		z-index: 50;
 	}
-	#header-menu.widgetContainer {
+	#header-sidebar-menu {
 		position:fixed;
-		right: 0;
-		top: 0;
+		right:0;
+		top:0;
+		width:25%;
+		z-index: 100;
+	}
+	#header-menu.widgetContainer {
+		margin: 100px 0;
 		z-index: 50;
-		width: 25%;
+		width: 100%;
 		text-align: center;
 	}
 	#header-menu ul {
@@ -904,16 +920,36 @@ ul#outer-list li.inner-list-item {
 	
 	#header-menu h1.widgetTitle {
 		width: 100%;
-		color: #F5F9E5;
 		font-size: 22px;
 		text-align: center;
 	}
-	
+	#header-menu.widget_nav_menu {
+		color: #F5F9E5;
+	}
+	#header-menu.widget_search  {
+		color: #192738;
+		margin-top:-50px;
+	}
 	@media screen and (max-width: 900px) { 
 	#header-menu.widgetContainer {
-		position:relative;
-		margin:-34px auto 50px auto;
+		position: relative;
+		margin: 0 auto;
+		height: 100%;
+		display: inline-block;
 		width: 50%;
+	}
+	#header-sidebar-menu {
+		position:fixed;
+		top:85%;
+		width:100%;
+		height:15%;
+		background-color:#192738;
+	 }
+	 #header-menu.widget_nav_menu {
+	}
+	#header-menu.widget_search  {
+		color: #F5F9E5;
+		margin-top:0px;
 	}
 }
  

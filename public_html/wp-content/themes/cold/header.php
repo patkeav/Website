@@ -67,8 +67,10 @@
 					'menu_class' => ''
 					); ?>
 				<?php wp_nav_menu( $args ); ?> 
-				
+			</header>
+			<div id="header-sidebar-menu">
 				<?php get_sidebar('header'); ?>
+			</div>
 				<div id="header-contact-info">
 					<div id="socialMedia" class="sidebar-info">
 						<ul>
@@ -82,6 +84,5 @@
 								<a href="https://twitter.com/PatrickKeaveny" target="_blank" class="twitter">twitter</a>
 							</li>
 						</ul>
-					</div>
-				</div>
-			</header>
+					</div><!--#socialMedia-->
+				</div><!--/#header-contact-info-->

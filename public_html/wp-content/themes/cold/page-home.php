@@ -2,7 +2,7 @@
 
 <?php get_header(); ?>
 
-<h1 style=" margin-top: 172px"> Writer of Stories and Code </h1>
+<h1 class="brand-home"> Writer of Stories and Code </h1>
 <div id="all" class="brand"></div>
 <div id="ap" class="brand"></div>
 <div id="code" class="brand"></div>
