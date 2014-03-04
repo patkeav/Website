@@ -64,17 +64,9 @@ $current_cat = $cat[0]->cat_name;
 			
 				<div class="entry-taxonomy">
 					
-					<!--<p>Filed under: <?php the_category(', '); ?></p>-->
 					<p><?php the_tags(); ?></p>
 					
 				</div> <!-- end .entry-taxonomy -->
-				
-				<!--<div class="pagination">
-								
-					<p class="next"><?php next_post_link('Next post: %link'); ?></p>
-					<p class="previous"><?php previous_post_link('Previous post: %link'); ?></p>				
-						
-				</div> end .pagination -->
 				
 				<?php if ('open' == $post->comment_status) { ?>
 				

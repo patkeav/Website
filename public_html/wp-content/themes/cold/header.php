@@ -1,5 +1,4 @@
 <?php
-
 	$url = get_template_directory_uri();
 ?>
 <!doctype html>
@@ -54,41 +53,35 @@
 		</script>
 	</head>
 	<body <?php body_class(); ?>>
-		
-		<div id="wrapper">
-
-			<!--<a class="header-link" href="<?php //echo home_url(); ?>" rel="index" title="Go to home page">-->
-	
-				<header id="site-header" role="banner">
+		<div id="wrapper">	
+			<header id="site-header" role="banner">
+				<div id="branding">
+					<a href="http://www.patrickkeaveny.com/index.php">Patrick Keaveny</a>						
+				</div> <!-- end #branding -->
+				<?php 
+				$options = array('about', 'portfolio', 'blog');
+				$args = array(
+					'menu' => 'navigation',
+					'container' => 'nav',
+					'container_class' => '',
+					'menu_class' => ''
+					); ?>
+				<?php wp_nav_menu( $args ); ?> 
 				
-					<div id="branding">
-						<a href="http://www.patrickkeaveny.com/index.php">Patrick Keaveny</a>						
-					</div> <!-- end #branding -->
-					<?php 
-					$options = array('about', 'portfolio', 'blog');
-					$args = array(
-						'menu' => 'navigation',
-						'container' => 'nav',
-						'container_class' => '',
-						'menu_class' => ''
-						); ?>
-					<?php wp_nav_menu( $args ); ?> 
-					
-					<?php get_sidebar('header'); ?>
-					<div id="header-contact-info">
-						<div id="socialMedia" class="sidebar-info">
-							<ul>
-								<li>
-									<a href="http://www.facebook.com/patrick.keaveny.7" target="_blank" class="facebook">facebook</a>
-								</li>
-								<li>
-									<a href="http://www.linkedin.com/profile/edit?trk=hb_tab_pro_top" target="_blank" class="linkedin">linkedin</a>
-								</li>
-								<li>
-									<a href="https://twitter.com/PatrickKeaveny" target="_blank" class="twitter">twitter</a>
-								</li>
-							</ul>
-						</div>
+				<?php get_sidebar('header'); ?>
+				<div id="header-contact-info">
+					<div id="socialMedia" class="sidebar-info">
+						<ul>
+							<li>
+								<a href="http://www.facebook.com/patrick.keaveny.7" target="_blank" class="facebook">facebook</a>
+							</li>
+							<li>
+								<a href="http://www.linkedin.com/profile/edit?trk=hb_tab_pro_top" target="_blank" class="linkedin">linkedin</a>
+							</li>
+							<li>
+								<a href="https://twitter.com/PatrickKeaveny" target="_blank" class="twitter">twitter</a>
+							</li>
+						</ul>
 					</div>
-				</header>
-			<!--</a>-->
+				</div>
+			</header>

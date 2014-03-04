@@ -2,7 +2,7 @@
 
 		<h4><?php single_cat_title();?><?php if (is_category('blog')) { echo '(s) All'; } else { echo ' Blog'; } ?></h4>
 		<small><h1><?php echo category_description() ?></h1></small>
-			<div id="categoryList">
+			<div id="category-list">
 				<h3>Categories</h3><br />
 				<?php
 				

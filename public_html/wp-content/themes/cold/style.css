@@ -419,7 +419,7 @@ time {
 	border-bottom: 2px solid #192738;
 } 
  
-#content h2 { margin: 30px }
+#content h2 { margin: 15px 0px }
  /**
 .entry-header { padding: 20px 0px 50px 0px;
 	position: relative;
@@ -784,6 +784,7 @@ ul#outer-list li.outer-list-item  {
 }
 ul#outer-list {
 	width: 100%;
+	margin: 0 auto 25% auto;
 }
 ul#outer-list h2 {
 	margin: 0;
@@ -813,9 +814,6 @@ ul#outer-list li.inner-list-item {
 	margin: 0 auto; 
 	text-align: center;
 }
-#resume-container ul {
-	margin: 0 auto;
-}
 #resume-container .single {
 	width:100%;
 }
@@ -839,17 +837,20 @@ ul#outer-list li.inner-list-item {
 	font-size: 16px;
 	padding: 0 50px;
 	margin: 0 auto;
-	margin-top: -50px;
-	float: right;
+	text-align:center;
 }
-@media screen and (max-width: 600px) { 
+@media screen and (max-width: 908px) { 
 	#resume-info a.return {
-	margin-top: 0px;
-	float:none;
+		float:none;
+		text-align:center;
+		margin: 0 auto;
+		float: none;
+		width: inherit;
+		display: block;
 	}
 }
 .deets { 
-	margin-top: 150px;
+	margin: 25% auto;
 	}
 #first.deets {
 	margin-top: 0;
@@ -922,7 +923,7 @@ ul#outer-list li.inner-list-item {
 #universal.sidebar {
 	margin-top: 50px;
 } 
-.blogsAll {
+.blogs-all {
 	width: 64%;
 	height: auto;
 	position: relative;
@@ -930,19 +931,19 @@ ul#outer-list li.inner-list-item {
 	margin: 0 auto;
 	 }
 
-.blogsAll h1, .blogsAll h2, .blogsAll h3 {
+.blogs-all h1, .blogs-all h2, .blogs-all h3 {
 	font-size: 24px;
 }
-.blogsAll h2 a { display: block; }
-.blogsAll h1 p {
+.blogs-all h2 a { display: block; }
+.blogs-all h1 p {
 	line-height: 27px;
 } 
  
-.blogEntries {
+.blog-entries {
 	width: 100%;
 	padding-bottom: 100px; }
  
-#blogCategories {
+#blog-categories {
 	margin: 0px 10px 10px 10px;
 	padding: 20px 25px 50px 25px; }
  
@@ -1022,35 +1023,35 @@ footer { margin-bottom: 5px; }
  
 .noFloat { float: none; }
  
-#categoryList {
+#category-list {
 	width: 17.5%;
 	position: absolute;
 	left: 0;
 	font-size: 16px;
 	border-right: 2px solid  }
  
-	#categoryList p {
+	#category-list p {
 		line-height: 16px;
 		padding: 0px; }
  
-	#categoryList a {
+	#category-list a {
 		margin-top: -16px;
 		display: block;
 		padding: 6px;}
  
-		#categoryList a:hover {
+		#category-list a:hover {
 			background: #184068;
 			color: white; }
  
-		#categoryList a:active {
+		#category-list a:active {
 			opacity: 0.8;
  }
  
-		#categoryList a.listActive {
+		#category-list a.listActive {
 			background: #184068;
 			color: white; }
  
-#formContainer {
+#form-container {
 	height: 100%;
 	width: 50%;
 	float: right;

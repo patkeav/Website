@@ -4,7 +4,7 @@
 
 $args = array('parent'=>44);
 $cats = get_categories($args);
-$params = 'orderby=date&orderASC'; 
+$params = 'orderby=date&orderDESC'; 
 
 ?>
 <style>
@@ -25,22 +25,16 @@ $params = 'orderby=date&orderASC';
 	
 	<!--#skrollr-body is used to 'fake' scrolling on mobile devices transform:rotate(0deg);transform:rotate(360deg);-->
 	<div id="skrollr-body">
-		<div id="resume-container" 
-			>
-			<!--data-0="background-color:rgb(0,0,255);" 
-			data-500="background-color:rgb(255,0,0);"
-			-->
-			
-			<div id="first" class="deets">				
+		<div id="resume-container">
+			<div id="first">				
 				<header class="entry-header">
 					<h1 class="entry-title">Welcome to My R&eacute;sum&eacute;!</h1>
-				</header>
+				</header><!--/#entry-header-->
 				<div class="entry-content">
 					<p> Feel free to browse through my R&eacute;sum&eacute;. </p>
 					<p> If you need to get in touch don't hesitate to drop me a line! </p>
-			
-				</div>
-			</div><!--#first.deets-->
+				</div><!--/#entry-content-->
+			</div><!--#first-->
 			<ul id="outer-list">
 				<?php foreach ($cats as $cat) { ?>
 					<?php $slug = $cat->slug; ?>
@@ -53,12 +47,11 @@ $params = 'orderby=date&orderASC';
 				
 						<?php $category = array('category' => $cat->cat_ID,
 												'orderby' => 'post_date',
-												'order' => 'ASC' 
+												'order' => 'DESC' 
 												); ?>
 				
-						<?php $posts = get_posts($category); 
-						?>
-				
+						<?php $posts = get_posts($category); ?>
+						
 						<?php foreach ($posts as $post) { ?>
 							<?php
 								$title = the_title('', '', false);
@@ -67,11 +60,10 @@ $params = 'orderby=date&orderASC';
 							<li class="inner-list-item"><a href="#" id="<?php echo $string; ?>" class="scroll-click-li"><?php echo $post->post_title; ?></a></li>
 						<?php } ?>
 					
-						</ul>
-					</li>
+						</ul><!--/.inner-list-->
+					</li><!--/.outer-list-item-->
 				<?php } ?>
-			</ul>
-	
+			</ul><!--/#outer-list-->
 			<div id="resume-info"> 
 				<!--
 				<p align="right" style="margin-right: 150px; padding-bottom: 25px">Thanks for coming to my site! Here, 
@@ -84,6 +76,7 @@ $params = 'orderby=date&orderASC';
 					<?php $query = new WP_query($params . '&category_name=' . $slugger);
 					?>
 					<div class="<?php echo $slugger; ?>">
+						<h1> <?php echo $cat->cat_name; ?> Experience</h1>
 						<?php
 							while($query->have_posts()) : $query->the_post(); ?>
 						
@@ -91,37 +84,28 @@ $params = 'orderby=date&orderASC';
 								$title = the_title('', '', false);
 								$string = preg_replace('/[^a-z]+/i', '', $title);
 								?> 	
-								<div id="<?php echo $string; ?>" class="deets <?php echo $slugger; ?>"
+								<div id="<?php echo $string; ?>" class="deets "
 									data--50-bottom-top="opacity: 0;" 
 									data--50-bottom-bottom="opacity: 1;"
 								">
 									<header class="entry-header">
-		
-										<h1 class="entry-title" >
-										<!--data--50-top-bottom="margin-right:150%; " 
-										data--25-bottom-bottom="margin-right:0%;"-->
-										
-										
+										<h2 class="entry-title" >
 											<?php the_title(); ?>
-											
-										</h1>
+										</h2><!--/.entry-title-->
 										<a href=#" class="return">Return to Top</a>
-									</header>
+									</header><!--/.entry-header-->
 									<div class="entry-content single">
 		
 										<?php the_content(); ?>
 							
-									</div>
-								</div>
-					
+									</div><!--/.entry-content-->
+								</div><!--/.deets-->
 						<?php endwhile;
 						wp_reset_postdata(); ?>
 					</div>
 				<?php } ?> 
-			
-			</div>
+			</div><!--/#resume-info-->
 			<div id="empty" class="clear"></div>
-	
 		</div> <!-- end resume-container -->
 	</div><!--#skroll-body-->
 </div><!--content-->
