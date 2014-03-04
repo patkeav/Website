@@ -97,10 +97,10 @@ $params = 'orderby=date&orderASC';
 								">
 									<header class="entry-header">
 		
-										<h1 class="entry-title" 
-										data--50-top-bottom="margin-right:150%; " 
-										data--25-bottom-bottom="margin-right:0%;"
-										>
+										<h1 class="entry-title" >
+										<!--data--50-top-bottom="margin-right:150%; " 
+										data--25-bottom-bottom="margin-right:0%;"-->
+										
 										
 											<?php the_title(); ?>
 											
