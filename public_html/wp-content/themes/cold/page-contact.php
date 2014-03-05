@@ -3,7 +3,6 @@
 <style>
 #content { margin-top: 0px; }
 </style>
-<h1 style="margin-top: 150px; margin-bottom: -120px; margin-left: 10px;"> Writer of Stories and Code </h1>
 <div id="all" class="brand"></div>
 <div id="ap" class="brand"></div>
 <div id="code" class="brand"></div>

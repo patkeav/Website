@@ -24,11 +24,33 @@ a {
 	text-decoration: none;
 	color: #184068; }
 
+.menu-item-264 a {
+	outline: #F5F9E5 solid 1px;
+	color: #F5F9E5;
+	padding: 5px;
+}
+
+.menu-item-264 a:hover {
+	outline: #F5F9E5 solid 2px;
+	color: #F5F9E5;
+}
+
+.menu-item-264 a:visited {
+	color: #F5F9E5;
+}
+
 #searchsubmit {
 	width: auto;
 	padding 0px 20px;
 	font-size: 16px;   
 }
+
+.search-results .cat-div { 
+	width: 50%;
+	float: none; 
+	margin-left: auto;
+	margin-right: auto
+	}
  
 	a:visited { color: #184068; }
  
@@ -135,14 +157,14 @@ code {
 		top: 0;
 		width: inherit;
 		margin: auto;
-		z-index: 2;
+		z-index: 9;
 		opacity: 0.9; }
  
 	/*#wrapper a:hover::not(#content), #wrapper a:hover::not(h1) */
 #site-header #branding {
 		background-color: #192738;
 		position: relative;
-		z-index: 2;
+		z-index: 10;
 		color: #F5F9E5;
 		font-size: 72px;
 		text-align: center;
@@ -228,17 +250,17 @@ nav {
 	width: 120%;
 	height: 300px; 
 	position: relative;
-	z-index: 7;
+	z-index: 1;
 }
 #all.brand {
-	z-index: 11;
+	z-index: 6;
 	background: url(css/images/writerof.png) repeat-x;
 	-webkit-animation: scale-all 8s infinite normal linear;
 	-moz-animation: scale-all 8s infinite normal linear;
 	-o-animation: scale-all 8s infinite normal linear;
 }
 #code.brand {
-	z-index: 8;
+	z-index: 4;
 	margin-top: -235px; 
 	background: url(css/images/writerofcode.png) repeat-x;
 	-webkit-animation: scale-all 4s infinite normal linear;
@@ -246,7 +268,7 @@ nav {
 	-o-animation: scale-all 4s infinite normal linear;
 }
 #ap.brand {
-	z-index: 9;
+	z-index: 2;
 	margin-top: -325px;
 	background: url(css/images/writerofap.png) repeat-x;
 	-webkit-animation: scale-all 2s infinite normal linear;
@@ -265,9 +287,11 @@ nav {
 .developer #code.brand {
 	margin-top: 75px;
 }
-.brand-home {
+#wrapper h1.brand-home {
 	margin-top: 200px;
+	text-align:left;
 }
+.page-template-page-resume-php #wrapper #content h1 { text-align:center }
 #brandName {
 	float: right;
 	margin: 0px 10% 0px 0px;
@@ -294,6 +318,9 @@ aside#sidebar {
 .page #content {
 	width: 50%;
 	margin: 0 auto;
+}
+.page #content h1 {
+	text-align:left;
 }
 .thanks .brand {
 	height: 50px;
@@ -409,11 +436,11 @@ time {
 	.entry-taxonomy a { margin: 15px 0px 15px 5px; }
  
 #wrapper h1 {
-	text-align: left;
+	text-align: center;
 	padding: 10px;
 	opacity: 0.7;
 	clear: both;
-	width:73%;
+	width:100%;
 	margin: 0; }
  
 #content h3 {
@@ -425,12 +452,15 @@ time {
  
 #content h4 {
 	font-size: 22px;
-	margin: 10px 0;
+	margin: 0 auto;
+	text-align: center;
 	opacity: 0.7;
-	width: 75%;
+	width: 100%;
 	border-bottom: 2px solid #192738;
 } 
- 
+#wrapper .single h1.entry-title {
+	text-align: left;
+}
 #content h2 { margin: 15px 0px }
  /**
 .entry-header { padding: 20px 0px 50px 0px;
@@ -520,10 +550,9 @@ time {
 		line-height: 16px;
 		font-size: 14px;
 		padding: 20px 0px 10px 50px;
-		background: url(images/arrow.gif) no-repeat;
-		background-position: 0px 10px; }
+		}
  
-#content .cat-div {
+.cat-div {
 	width: 100%;
 	float:left;
 	height: auto;
@@ -711,20 +740,15 @@ img:hover { opacity: 1 ; }
 #form1 #Submit:active { background: #93999c; }
  
 #form1 {
-	float: left;
-	width: 15%;
+	width: 100%;
 	height: auto;
 	margin: 50px 0px 0px 0px;
-	display: none; }
- 
-	#form1 input { height: 1em; }
- 
-	#form1 textarea { margin-top: -5%; }
- 
+}
+   
 	#form1 input, #form1 textarea {
-		width: 79%;
-		margin-left: 0%;
-		font-size: 16px;
+		width: 100%;
+		font-size: 22px;
+		margin: 0 auto;
 		font-family: Helvetica, Geneva, sans-serif; }
  
 	#form1 #Submit {
@@ -850,6 +874,7 @@ ul#outer-list li.inner-list-item {
 	margin: 0 auto;
 	text-align:center;
 }
+.page-template-page-resume-php #header-sidebar-menu { display:none }
 @media screen and (max-width: 908px) { 
 	#resume-info a.return {
 		float:none;
@@ -1090,9 +1115,7 @@ footer { margin-bottom: 5px; }
 #form-container {
 	height: 100%;
 	width: 50%;
-	float: right;
-	padding-right: 5px;
-	margin: -150px 0px 0px 0px;
+	margin: 0 auto;
 	display: block; }
 	
 	#contactInput {
