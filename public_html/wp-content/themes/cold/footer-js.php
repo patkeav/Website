@@ -44,10 +44,10 @@ $(document).ready(function() {
 		// same function as one above, but for id-grabbing instead of class-grabbing
 		$("#resume-container .scroll-click-li").click(function() {
 			var target = '#resume-info #' + $(this).attr("id"); 
-			var target_div = $(target).offset().top - $("#site-header").height(); 
+			var target_div = $(target).offset().top - ($("#site-header").height()); 
 			$('html, body').animate({
 				scrollTop: target_div
-			}, 2000);
+			}, 3000);
 		});
 		
 		//same function as above, but for returning to top

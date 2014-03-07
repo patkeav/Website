@@ -16,7 +16,7 @@ $params = 'orderby=date&orderDESC';
 	.brand {
 		height: 0px;
 		margin-top: 150px;
-	}
+	} 
 	.entry-meta { text-align: left; }
 </style>
 <h1 style="margin-top: 150px; margin-bottom: -120px; margin-left: 10px; display:none;"> Writer of Stories and Code </h1>
@@ -85,9 +85,10 @@ $params = 'orderby=date&orderDESC';
 								$string = preg_replace('/[^a-z]+/i', '', $title);
 								?> 	
 								<div id="<?php echo $string; ?>" class="deets "
-									data--50-bottom-top="opacity: 0;" 
-									data--50-bottom-bottom="opacity: 1;"
-								">
+									data-bottom-top="opacity: 0; transform:scaleX(0.8);" 
+									data-172-top="opacity: 1; transform:scaleX(1);"
+
+								>
 									<header class="entry-header">
 										<h2 class="entry-title" >
 											<?php the_title(); ?>
