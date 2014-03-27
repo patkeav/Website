@@ -112,3 +112,9 @@ $params = 'orderby=date&orderDESC';
 </div><!--content-->
 
 <?php get_footer(); ?>
+
+<!-- have to put the skrollr init at the end so it's loaded outside the DOM -->
+<script type="text/javascript" src="<?php echo get_template_directory_uri() ?>/js/skrollr.js"></script>
+	<script type="text/javascript">
+		skrollr.init();
+	</script>

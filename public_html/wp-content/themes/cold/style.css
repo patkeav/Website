@@ -320,8 +320,10 @@ aside#sidebar {
 }
 
 .single #content {
-	width: inherit;
+	width: 90%;
 }
+.single #header-sidebar-menu, .single #header-contact-info { display:none }
+
 .page #content {
 	width: 50%;
 	margin: 0 auto;
@@ -417,7 +419,7 @@ time {
 	padding: 10px;
 }
 .single {
-	width: 90%;
+	width: 100%;
 }	
 .entry-taxonomy {
 	font-family: "Fertigo";
@@ -850,6 +852,12 @@ ul#outer-list h2 {
 		text-align:center;
 		margin: 0 auto;
 	}
+	body { overflow: scroll; } 
+	.page #content { width: 90%; }
+	
+	#site-header {
+		position:absolute;
+	}
 }
 
 ul#outer-list li.inner-list-item {
@@ -892,7 +900,6 @@ ul#outer-list li.inner-list-item {
 		float:none;
 		text-align:center;
 		margin: 0 auto;
-		float: none;
 		width: inherit;
 		display: block;
 	}
@@ -1159,7 +1166,6 @@ footer { margin-bottom: 5px; }
 	float: inherit;
 	display: block;
 	padding-top: 50px;
-	overflow: hidden;
 	outline: #F5F9E5 solid 3px;
 	background: url(images/SMSprites.png) no-repeat; 
 }	

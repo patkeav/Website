@@ -7,7 +7,7 @@
 
 	<head>
 		<meta charset="<?php bloginfo( 'charset' ); ?>">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 		<title><?php wp_title(' &mdash; ',true,'right'); ?><?php bloginfo('name'); ?></title>
 
 		<?php if ( is_home() ) {?>

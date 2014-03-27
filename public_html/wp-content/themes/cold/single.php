@@ -88,10 +88,4 @@ $current_cat = $cat[0]->cat_name;
 
 </div> <!-- end content -->
 
-<aside id="sidebar" role="complementary">
-
-	<?php get_sidebar('single'); ?>
-	
-</aside>
-
 <?php get_footer(); ?>

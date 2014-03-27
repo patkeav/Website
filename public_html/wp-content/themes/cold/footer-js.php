@@ -78,9 +78,3 @@ function loopOver(element) {
 var sprytextfield1 = new Spry.Widget.ValidationTextField("sprytextfield1", "email");
 
 </script>
-<!-- have to put the skrollr init at the end so it's loaded outside the DOM -->
-<script type="text/javascript" src="<?php echo get_template_directory_uri() ?>/js/skrollr.js"></script>
-	<script type="text/javascript">
-		skrollr.init();
-	</script>
-<script type="text/javascript">
