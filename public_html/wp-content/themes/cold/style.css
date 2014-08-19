@@ -254,7 +254,7 @@ nav {
   }
 }
 .brand {
-	width: 120%;
+	width: inherit;
 	height: 300px; 
 	position: relative;
 	z-index: 1;
@@ -1142,7 +1142,7 @@ footer { margin-bottom: 5px; }
 	}
 
 #socialMedia {
-	float: left;
+	
 }
 
 @media screen and (max-width: 900px) { 
@@ -1168,6 +1168,7 @@ footer { margin-bottom: 5px; }
 	padding-top: 50px;
 	outline: #F5F9E5 solid 3px;
 	background: url(images/SMSprites.png) no-repeat; 
+	font-size:1px;
 }	
 #socialMedia ul li a.facebook { background-position: 0px 0px; }
 #socialMedia ul li a:hover.facebook { background-position: 0px -51px; }
